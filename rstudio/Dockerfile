@@ -67,6 +67,18 @@ COPY run.sh /etc/services.d/rstudio/run
 
 
 COPY add-students.sh /usr/local/bin/add-students
+
+# install packages required by `castarter`
+RUN apt-get update && apt-get install -y \
+	r-cran-rjava \
+	r-cran-xml \
+	libssl-dev \
+	r-cran-curl
+	
+# Install castarter packages in R
+RUN R -e "install.packages(c('ggplot2', 'stringi', 'mgcv', 'devtools'), repos='http://cran.rstudio.com/'); devtools::install_github('giocomai/castarter')"
+
+
 EXPOSE 8787
 
 ## Expose a default volume for Kitematic
