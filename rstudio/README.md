@@ -1,14 +1,12 @@
-[![Build Status](https://travis-ci.org/rocker-org/rocker.svg?branch=master)](https://travis-ci.org/rocker-org/rocker)
-
 # rocker/rstudio #
 
 
 ## Quickstart
 
-Start an RStudio server container. From the docker window: 
+Start an RStudio server container with all pre-installed packages for `castarter`. From the docker window: 
 
 ```bash
-sudo docker run -d -p 8787:8787 rocker/rstudio
+sudo docker run -d -p 8787:8787 giocomai/castarter-rocker-rstudio
 ```
 
 Use the `docker-machine ip` to determine the ip address for your local or remote machine command, then visit that address
@@ -22,7 +20,7 @@ For customization details, including custom passwords & shared volumes see [Usin
 
 ## Status ##
 
-Anyone interested in proposing or collaborating on additional use cases should read our [guide to contributing](https://github.com/rocker-org/rocker/wiki/How-to-contribute) and [get in touch](http://github.com/rocker-org/rocker/issues)
+This docker has been created by forking [rocker-org's rstudio server docker] (https://github.com/rocker-org/).
 
 ## License ##
 
