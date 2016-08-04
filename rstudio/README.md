@@ -42,8 +42,9 @@ chown rstudio:rstudio -R /home/rstudio
 And then run docker with the following command:
 
 ```bash
-docker run -p 8787:8787 -v /home/rstudio:/home/rstudio/ giocomai/castarter-rocker-rstudio```
+docker run -p 8787:8787 -v /home/rstudio:/home/rstudio/ giocomai/castarter-rocker-rstudio
 ```
+
 The instance will then be reachable via browser at the address `http://xxx.xxx.xxx.xxx:8787`
 
 
