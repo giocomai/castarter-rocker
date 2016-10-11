@@ -73,7 +73,6 @@ RUN apt-get update && apt-get install -y \
 	r-cran-rjava \
 	r-cran-xml \
 	libssl-dev \
-	r-cran-curl
 	
 # Install castarter packages in R
 RUN R -e "install.packages(c('ggplot2', 'stringi', 'mgcv', 'devtools'), repos='http://cran.rstudio.com/'); devtools::install_github('giocomai/castarter')"
